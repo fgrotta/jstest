@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Javascript Course Exercise 2</title>
+		<link rel = "stylesheet" type="text/css" href="test.css">
+		<script language = "javascript" src = "handlebars.js"></script>
+		<script language = "javascript" src = "controller.js"></script>
+		<script language = "javascript" src = "test.js"></script>
+		<script language = "javascript" src = "assert.js"></script>
+		<script language = "javascript" src = "mock.js"></script>
+		<script language = "javascript" src = "exampletest.js"></script>
+	</head>
+	
+	<body>
+		
+		<script id = "testTemplate" type = "text/x-handlebars-template">
+			{{#results}}
+			<h1>{{module}}</h1>
+			<p><b>{{name}}</b>: {{status}}</p>
+			{{/results}}
+		</script>
+		
+		<div id = "testTarget">
+		
+		</div>
+		
+		<script>
+			App.Test.execTests();
+			App.Controller.renderTests(App.Test.getResults());
+		</script>
+
+	</body>
+</html>
