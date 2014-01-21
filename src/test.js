@@ -2,7 +2,7 @@ var App = App || {};
 
 App.Test = (function (App) {
 	function Test() {
-	
+
 		var BEFORE_CLASS = "beforeClass";
 		var BEFORE = "before";
 		var TEST = "test";
@@ -10,6 +10,11 @@ App.Test = (function (App) {
 		var AFTER_CLASS = "afterClass";
 		var testScopes = [BEFORE_CLASS, BEFORE, TEST, AFTER, AFTER_CLASS];
 
+        function TestResult(module, name, status) {
+            this.module = module;
+            this.name = name;
+            this.status = status;
+        }
 
 		this.execTests = function() {
             /* It has to discover the tests under App.Tests, execute them and show the results. See the exampletest.js
